@@ -1,0 +1,487 @@
+/* Reset and Base Styles */
+
+.page-hero {
+    margin-top: -10px;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Navigation */
+.navbar {
+    background: #00264C;
+    backdrop-filter: blur(10px);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 1rem 0;
+    transition: all 0.3s ease;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo i{
+    color: rgb(207, 72, 23);
+}
+
+.nav-logo h2 {
+    color: white;
+    font-size: 1.5rem;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+}
+
+.nav-link:hover {
+    color: #ff4603;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.nav-link.active {
+    background: #ffffff;
+    color: #00264C;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: white;
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #000033 0%, 	#003333 100%);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 0 20px;
+}
+
+.title h1 {
+    font-size: 85px;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.highlight {
+    color: #ff4603;
+}
+
+.hero-content p {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    background: #FFE6CC;
+    color: #001933;
+    border: none;
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px #a39382;
+}
+
+/* Sections */
+.section {
+    min-height: 50vh;
+    padding: 150px 0;
+    background-color: #445363;
+    color: white;
+    border-top: none;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: white;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: rgb(228, 228, 228);
+}
+
+/* Content Grid */
+.content-grid, .curriculum-grid, .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.overview-grid .row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+    .overview-grid .row {
+        grid-template-columns: 1fr;
+    }
+}
+
+.content-card, .course-category {
+    background: #001933;
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: all 0.3s ease;
+    border-top: 4px solid #0d6efd;
+}
+
+.content-card i, .course-category i {
+    font-size: 3rem;
+    color: #0d6efd;
+    margin-bottom: 1rem;
+}
+
+.content-card h3, .course-category h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: rgb(207, 72, 23);
+}
+
+.course-category ul {
+    list-style: none;
+    text-align: left;
+}
+
+.course-category li {
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.course-category li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #28a745;
+    font-weight: bold;
+}
+
+/* Slideshow */
+.slideshow-container {
+    position: relative;
+    max-width: 1200px;
+    margin: 3rem auto;
+    height: 600px;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.career-card {
+    background: #00264C;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 3rem 2rem;
+}
+
+.career-card i {
+    font-size: 4rem;
+    color: rgba(27, 92, 190, 0.9);
+    margin-bottom: 1.5rem;
+}
+
+.career-card h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #ffffff;
+}
+
+.career-card p {
+    font-size: 1.2rem;
+    color: #ffffff;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(22, 78, 163, 0.9);
+    color: white;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev:hover, .next:hover {
+    background: rgba(27, 92, 190, 0.9);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.dots-container {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 8px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active, .dot:hover {
+    background-color: rgba(22, 78, 163, 0.9);
+}
+
+/* Skills Section */
+.skill-bar {
+    background: #f1f1f1;
+    margin-bottom: 2rem;
+    border-radius: 25px;
+    padding: 3px;
+    position: relative;
+    overflow: hidden;
+}
+
+.skill-name {
+    position: absolute;
+    top: -35px;
+    left: 0;
+    font-weight: 600;
+    color: #333;
+}
+
+.skill-progress {
+    height: 30px;
+    background: linear-gradient(90deg, #0d6efd, #6610f2);
+    border-radius: 22px;
+    transition: width 2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 600;
+}
+
+/* Apply Section */
+.apply-section {
+    background: #00264C;
+    color: white;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.apply-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.apply-section p {
+    font-size: 1.3rem;
+    margin-bottom: 2.5rem;
+}
+
+.apply-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cta-button.primary {
+    background: white;
+    color: #00264C;
+}
+
+.cta-button.primary:hover {
+    background: #f8f9fa;
+}
+
+.cta-button.secondary {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.cta-button.secondary:hover {
+    background: white;
+    color: #00264C;
+}
+
+/* Footer */
+.footer {
+    background: #212529;
+    color: white;
+    text-align: center;
+    padding: 3rem 0 1.5rem;
+}
+
+.social-links {
+    margin-top: 1rem;
+}
+
+.social-links a {
+    color: white;
+    font-size: 1.5rem;
+    margin: 0 1rem;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #0d6efd;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+    
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        background-color: #00264C;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        padding: 2rem 0;
+    }
+    
+    .nav-menu.active {
+        left: 0;
+    }
+    
+    .nav-link {
+        display: block;
+        margin: 0.5rem 0;
+    }
+    
+    .nav-link.active {
+        background: #ffffff;
+        color: #00264C;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .apply-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .slideshow-container {
+        height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 2rem 0;
+        height: 90vh;
+    }
+    
+    .section {
+        padding: 60px 0;
+    }
+}

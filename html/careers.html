@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers - BS Information Technology</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2><i class="fas fa-laptop-code"></i> BSIT</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="home.html" class="nav-link">Home</a></li>
+                <li><a href="overview.html" class="nav-link">Overview</a></li>
+                <li><a href="curriculum.html" class="nav-link">Curriculum</a></li>
+                <li><a href="programs.html" class="nav-link">Programs</a></li>
+                <li><a href="careers.html" class="nav-link">Careers</a></li>
+
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Careers Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>IT Career Opportunities</h1>
+            <p>Discover high-demand careers awaiting BSIT graduates</p>
+        </div>
+    </section>
+
+    <!-- Slideshow Section -->
+    <section class="section careers-section">
+        <div class="container">
+            <h2 class="section-title">Featured Careers</h2>
+            <div class="slideshow-container">
+                <div class="slide active">
+                    <div class="career-card large">
+                        <i class="fas fa-code fa-4x"></i>
+                        <h3>Software Developer</h3>
+                        <p>Build web and mobile applications. Master languages like JavaScript, Python, Java. Create innovative solutions for businesses.</p>
+                        <div class="career-details">
+                            <span><i class="fas fa-dollar-sign"></i> $110K/year avg</span>
+                            <span><i class="fas fa-briefcase"></i> High demand</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="career-card large">
+                        <i class="fas fa-server fa-4x"></i>
+                        <h3>Network Engineer</h3>
+                        <p>Design, implement, and manage network infrastructure. Ensure secure and reliable connectivity for organizations.</p>
+                        <div class="career-details">
+                            <span><i class="fas fa-dollar-sign"></i> $95K/year avg</span>
+                            <span><i class="fas fa-clock"></i> Growing field</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="career-card large">
+                        <i class="fas fa-database fa-4x"></i>
+                        <h3>Database Administrator</h3>
+                        <p>Manage enterprise databases, ensure data integrity, security, and performance. Work with SQL, Oracle, MySQL.</p>
+                        <div class="career-details">
+                            <span><i class="fas fa-dollar-sign"></i> $105K/year avg</span>
+                            <span><i class="fas fa-shield-alt"></i> Critical role</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="career-card large">
+                        <i class="fas fa-cloud fa-4x"></i>
+                        <h3>Cloud Architect</h3>
+                        <p>Design scalable cloud solutions using AWS, Azure, Google Cloud. Lead digital transformation initiatives.</p>
+                        <div class="career-details">
+                            <span><i class="fas fa-dollar-sign"></i> $150K/year avg</span>
+                            <span><i class="fas fa-rocket"></i> Future-proof</span>
+                        </div>
+                    </div>
+                </div>
+                <button class="prev" onclick="changeSlide(-1)">❮</button>
+                <button class="next" onclick="changeSlide(1)">❯</button>
+            </div>
+            <div class="dots-container">
+                <span class="dot active" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Additional Careers Grid -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">More Career Paths</h2>
+            <div class="careers-grid">
+                <div class="career-item">
+                    <i class="fas fa-user-shield"></i>
+                    <h4>Cybersecurity Analyst</h4>
+                    <p>Protect systems from cyber threats</p>
+                </div>
+                <div class="career-item">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h4>Mobile Developer</h4>
+                    <p>Create Android/iOS applications</p>
+                </div>
+                <div class="career-item">
+                    <i class="fas fa-chart-bar"></i>
+                    <h4>Data Analyst</h4>
+                    <p>Extract insights from big data</p>
+                </div>
+                <div class="career-item">
+                    <i class="fas fa-robot"></i>
+                    <h4>AI/ML Engineer</h4>
+                    <p>Build intelligent systems</p>
+                </div>
+                <div class="career-item">
+                    <i class="fas fa-gamepad"></i>
+                    <h4>Game Developer</h4>
+                    <p>Create interactive gaming experiences</p>
+                </div>
+                <div class="career-item">
+                    <i class="fas fa-cube"></i>
+                    <h4>DevOps Engineer</h4>
+                    <p>Streamline software delivery</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 BS Information Technology Program. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculum - BS Information Technology</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2><i class="fas fa-laptop-code"></i> BSIT</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="home.html" class="nav-link">Home</a></li>
+                <li><a href="overview.html" class="nav-link">Overview</a></li>
+                <li><a href="curriculum.html" class="nav-link active">Curriculum</a></li>
+                <li><a href="programs.html" class="nav-link">Programs</a></li>
+                <li><a href="careers.html" class="nav-link">Careers</a></li>
+
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Curriculum Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>Program Curriculum</h1>
+            <p>Detailed course breakdown across 4 years</p>
+        </div>
+    </section>
+
+    <!-- Curriculum Content -->
+    <section class="section">
+        <div class="container">
+
+
+            <div id="year1" class="tab-content active">
+                <h3>Year 1: Foundation</h3>
+                <div class="curriculum-grid">
+                    <div class="course-category">
+                        <h4><i class="fas fa-book"></i> General Education</h4>
+                        <ul>
+                            <li>College Algebra</li>
+                            <li>Computer Programming 1</li>
+                            <li>Understanding Computer Systems</li>
+                            <li>Technical Writing</li>
+                            <li>IT Ethics</li>
+                        </ul>
+                    </div>
+                    <div class="course-category">
+                        <h4><i class="fas fa-laptop-code"></i> Core IT</h4>
+                        <ul>
+                            <li>Programming Fundamentals</li>
+                            <li>Digital Logic</li>
+                            <li>Introduction to IT</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div id="year2" class="tab-content">
+                <h3>Year 2: Core Skills</h3>
+                <div class="curriculum-grid">
+                    <div class="course-category">
+                        <h4><i class="fas fa-laptop-code"></i> Programming</h4>
+                        <ul>
+                            <li>Object-Oriented Programming</li>
+                            <li>Data Structures & Algorithms</li>
+                            <li>Web Development 1</li>
+                        </ul>
+                    </div>
+                    <div class="course-category">
+                        <h4><i class="fas fa-network-wired"></i> Networking</h4>
+                        <ul>
+                            <li>Computer Networks</li>
+                            <li>Database Fundamentals</li>
+                            <li>Software Engineering</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div id="year3" class="tab-content">
+                <h3>Year 3: Specialization</h3>
+                <div class="curriculum-grid">
+                    <div class="course-category">
+                        <h4><i class="fas fa-database"></i> Advanced Systems</h4>
+                        <ul>
+                            <li>Advanced Database</li>
+                            <li>Web Development 2</li>
+                            <li>Network Security</li>
+                            <li>Systems Analysis & Design</li>
+                        </ul>
+                    </div>
+                    <div class="course-category">
+                        <h4><i class="fas fa-cloud"></i> Emerging Tech</h4>
+                        <ul>
+                            <li>Cloud Computing</li>
+                            <li>Mobile App Development</li>
+                            <li>Enterprise Systems</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div id="year4" class="tab-content">
+                <h3>Year 4: Capstone & Internship</h3>
+                <div class="curriculum-grid">
+                    <div class="course-category">
+                        <h4><i class="fas fa-project-diagram"></i> Capstone</h4>
+                        <ul>
+                            <li>Capstone Project 1</li>
+                            <li>Capstone Project 2</li>
+                            <li>IT Project Management</li>
+                            <li>Professional Elective</li>
+                        </ul>
+                    </div>
+                    <div class="course-category">
+                        <h4><i class="fas fa-briefcase"></i> Internship</h4>
+                        <ul>
+                            <li>On-the-Job Training (480 hours)</li>
+                            <li>Industry Immersion</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align: center; margin: 3rem 0;">
+                <a href="overview.html" class="cta-button secondary">← Previous: Overview</a>
+                <a href="programs.html" class="cta-button secondary">Next:     Programs →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 BS Information Technology Program. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+    <script>
+function showTab(tabName) {
+            // Hide all tab contents
+            var tabContents = document.getElementsByClassName('tab-content');
+            for (var i = 0; i < tabContents.length; i++) {
+                tabContents[i].classList.remove('active');
+                tabContents[i].style.opacity = '0';
+            }
+            
+            // Remove active class from all tab buttons
+            var tabButtons = document.getElementsByClassName('tab-button');
+            for (var i = 0; i < tabButtons.length; i++) {
+                tabButtons[i].classList.remove('active');
+            }
+            
+            // Show selected tab content with smooth fade
+            var selectedContent = document.getElementById(tabName);
+            selectedContent.classList.add('active');
+            setTimeout(function() {
+                selectedContent.style.opacity = '1';
+            }, 50);
+            
+            // Smooth scroll to the content area
+            document.getElementById(tabName).scrollIntoView({ behavior: 'smooth', block: 'start' });
+            
+            event.currentTarget.classList.add('active');
+        }
+    </script>
+</body>
+</html>
