@@ -1,12 +1,15 @@
 /* Reset and Base Styles */
-
-.page-hero {
-    margin-top: -10px;
-}
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+.page-hero {
+    background: linear-gradient(135deg, #000033 0%, #003333 100%);
+    padding: 120px 0 60px;
+    text-align: center;
+    color: white;
 }
 
 body {
